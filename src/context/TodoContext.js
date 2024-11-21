@@ -8,7 +8,7 @@ Functionality
 6) check box (toggle - completed and unCompleted)
 */
 
-import {createContext,useConext} from 'react'
+import {createContext,useContext} from 'react'
 
 export const TodoContext = createContext({
   todos:[
@@ -25,8 +25,9 @@ export const TodoContext = createContext({
 
 });
 
-export const Todoprovider = TodoContext.Provider;
+
+export const TodoProvider = TodoContext.Provider;
 
 export const useTodo = () => {
-  return useConext(TodoContext)
+  return useContext(TodoContext);
 }
